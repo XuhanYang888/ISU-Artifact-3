@@ -1,0 +1,129 @@
+<html>
+<head>
+	<title>Interest Calculator</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div class="sectionBackground">
+		<p class="title">Currency Converter</p>
+		<div>
+			<table>
+				<tr>
+					<td>
+						<select id="currencyDropdown1">
+						  <!-- Options will be populated dynamically -->
+						</select>
+					</td>
+					<td rowspan="2">⇌</td>
+					<td>
+						<select id="currencyDropdown2">
+						  <!-- Options will be populated dynamically -->
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="number" class="number-input" id="currencyAmount1" step="0.01">
+					</td>
+					<td>
+						<input type="number" class="number-input" id="currencyAmount2" step="0.01">
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	
+	<div class="sectionBackground">
+		<p class="title">Interest Calculator</p>
+		<div>
+			<table>
+				<tr>
+					<td>
+						<label>Select Interest Type:</label>
+					</td>
+					<td>
+						<label><input type="radio" id="simpleInterest" name="type" checked>
+							 Simple</label>
+					</td>
+					<td id="simpleError">
+						<p></p>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<label><input type="radio" id="compoundInterest" name="type">
+							 Compound</label>
+					</td>
+					<td id="compoundError">
+						<p></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Principal Amount ($):</label>
+					</td>
+					<td>
+						<input type="number" class="number-input" id="principalAmount" step="0.01">
+					</td>
+					<td id="principalError">
+						<p></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Interest Rate (%):</label>
+					</td>
+					<td>
+						<input type="number" class="number-input" id="interestRate" step="0.01">
+					</td>
+					<td id="rateError">
+						<p></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Interest Frequency:</label>
+					</td>
+					<td>
+						<select id="interestFreq" tabindex="1">
+							<option value="Annually">Annually</option>
+							<option value="Semiannually">Semiannually</option>
+							<option value="Quarterly">Quarterly</option>
+							<option value="Monthly">Monthly</option>
+						</select>
+					</td>
+					<td id="freqError">
+						<p></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Duration (years):</label>
+					</td>
+					<td>
+						<input type="number" id="duration" step="1">
+					</td>
+					<td id="durationError">
+						<p></p>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<button id="calculateButton" onclick="calculateInterest()" style="width:125px;">Calculate</button>
+
+		<br>
+		
+		<p class="title">Results</p>
+		<div id="results" style="margin: 0px;">
+			<p>No Inputs</p>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
