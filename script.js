@@ -220,7 +220,7 @@ document.getElementById("currencyDropdown1").addEventListener("change", function
   calculateCurrencyAmount("currencyAmount1", "currencyDropdown1", "currencyDropdown2");
 });
 document.getElementById("currencyDropdown2").addEventListener("change", function() {
-  calculateCurrencyAmount("currencyAmount2", "currencyDropdown1", "currencyDropdown2");
+  calculateCurrencyAmount("currencyAmount1", "currencyDropdown1", "currencyDropdown2");
 });
 
 // Function to add trailing zeros to a number
